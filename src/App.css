@@ -1,0 +1,145 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-container{
+  min-height: 100vh;
+  transition: background 0.8s ease;
+  padding: 20px;
+  font-family: 'Inter';
+}
+
+/* Theme: Hot (Clear skies/Summer) */
+
+.theme-hot{
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+  color: #432c00;
+}
+
+/* Theme: Cold (Winter/Snow) */
+
+.theme-cold{
+  background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+  color: #004d40;
+}
+
+
+/* Theme: Pleasant (Spring/Mild) */
+
+.theme-pleasant{
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  color: #1b4332;
+}
+
+/* Theme: Default/Natural */
+
+.theme-default{
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.15); /* Translucent */
+  backdrop-filter: blur(15px);           /* Glass effect */
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-right: 2rem;
+  text-decoration: none;
+  color: inherit; /* Takes color from your dynamic theme */
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+  .nav-links {
+    gap: 10px;
+  }
+}
+
+.active-link {
+  background: rgba(255, 255, 255, 0.4) !important;
+  opacity: 1 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
